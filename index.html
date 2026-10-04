@@ -1,8 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <meta
     name="description"
@@ -13,7 +19,7 @@
 
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- Font Awesome para los íconos -->
+  <!-- Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -22,21 +28,1810 @@
 
 <body>
 
-<header class="header" id="header">
+  <!-- =====================================================
+  HEADER
+  ===================================================== -->
 
-  <div class="brand">
+  <header class="header" id="header">
 
-    <img
-      src="img/logo.jpeg"
-      alt="Dr. Gastón A. Palacio"
-      class="brand-logo"
+    <!-- LOGO -->
+    <div class="brand">
+
+      <!-- Solo imagen del logo -->
+      <a href="#inicio" class="brand-logo-link">
+        <img
+          src="img/logo.jpeg"
+          alt="Logo Dr. Gastón Antonio Palacio"
+          class="brand-logo"
+        >
+      </a>
+
+    </div>
+
+
+    <!-- BOTÓN MENÚ MOBILE -->
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Abrir menú"
+      type="button"
+    >
+      ☰
+    </button>
+
+
+    <!-- NAVEGACIÓN -->
+    <nav class="nav" id="nav">
+
+      <a href="#inicio">Inicio</a>
+
+      <a href="#sobre-mi">Sobre Mí</a>
+
+      <a href="#formacion">Formación</a>
+
+      <a href="#servicios">Servicios</a>
+
+      <a href="#testimonios">Opiniones</a>
+
+      <a href="#galeria">Consultorio</a>
+
+      <a href="#contacto">Contacto</a>
+
+    </nav>
+
+
+    <!-- ACCIONES -->
+    <div class="header-actions">
+
+      <a
+        class="btn btn-outline btn-call"
+        href="tel:+543865425356"
+      >
+        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+
+        <span>Llamar</span>
+      </a>
+
+
+      <!--
+        Este botón llevará a la sección de turnos
+        del Centro Médico.
+      -->
+      <a
+        class="btn btn-primary"
+        href="#turnos-centro-medico"
+      >
+        Agendar turno
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================================
+  MAIN
+  ===================================================== -->
+
+  <main id="inicio">
+
+
+    <!-- =====================================================
+    HERO
+    ===================================================== -->
+
+    <section class="hero">
+
+      <div class="hero-copy">
+
+        <span class="eyebrow">
+          ESPECIALISTA EN OTORRINOLARINGOLOGÍA
+        </span>
+
+
+        <h1>
+          Tu salud
+          <span>auditiva, respiratoria y vocal</span>
+          es mi prioridad.
+        </h1>
+
+
+        <p>
+          Como especialista en otorrinolaringología, te ofrezco una
+          atención cercana y personalizada, respaldada por tecnología
+          de vanguardia y más de 10 años de experiencia al cuidado
+          de tu bienestar.
+        </p>
+
+
+        <div class="hero-buttons">
+
+          <!-- BOTÓN DIRECTO A TURNOS -->
+          <a
+            class="btn btn-primary btn-large"
+            href="#turnos-centro-medico"
+          >
+            Solicitar turno
+          </a>
+
+
+          <a
+            class="btn btn-outline btn-large"
+            href="#contacto"
+          >
+            Contactar
+          </a>
+
+        </div>
+
+
+        <div class="hero-trust">
+
+          <span>
+            <i
+              class="fa-solid fa-circle-check"
+              aria-hidden="true"
+            ></i>
+
+            +10 años de experiencia
+          </span>
+
+
+          <span>
+            <i
+              class="fa-solid fa-circle-check"
+              aria-hidden="true"
+            ></i>
+
+            Atención personalizada
+          </span>
+
+
+          <span>
+            <i
+              class="fa-solid fa-circle-check"
+              aria-hidden="true"
+            ></i>
+
+            Tecnología de vanguardia
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- =================================================
+      FOTO DEL DOCTOR
+      ================================================= -->
+
+      <div class="hero-visual">
+
+        <div class="image-frame">
+
+          <img
+            src="img/doctor.jpg"
+            alt="Dr. Gastón Antonio Palacio, especialista en Otorrinolaringología"
+          >
+
+        </div>
+
+
+        <!-- TARJETA DE EXPERIENCIA -->
+        <div class="experience-card">
+
+          <span
+            class="experience-icon"
+            aria-hidden="true"
+          >
+            <i class="fa-solid fa-award"></i>
+          </span>
+
+
+          <div class="experience-content">
+
+            <span>
+              Experiencia
+            </span>
+
+            <strong>
+              +10 Años
+            </strong>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+    SOBRE MI
+    ===================================================== -->
+
+    <section
+      class="section"
+      id="sobre-mi"
     >
 
-    <div class="brand-text">
+      <div class="section-heading">
 
-      <strong>
-        Dr. Gastón A. Palacio
-      </strong>
+        <h2>
+         Dr. Gastón Antonio Palacio
+        </h2>
+
+        <p>
+          Una trayectoria al servicio de la salud
+        </p>
+
+        <span class="line"></span>
+
+      </div>
+
+
+      <div class="about-grid">
+
+
+        <!-- FOTO -->
+        <div class="about-photo">
+
+          <div class="about-photo-frame">
+
+            <img
+              src="img/doctor1.jpg"
+              alt="Dr. Gastón Antonio Palacio, especialista en Otorrinolaringología"
+            >
+
+          </div>
+
+
+          <div class="about-photo-caption">
+
+            <span
+              class="about-photo-icon"
+              aria-hidden="true"
+            >
+              <i class="fa-solid fa-user-doctor"></i>
+            </span>
+
+
+            <div>
+
+              <strong>
+                Dr. Gastón Antonio Palacio
+              </strong>
+
+              <span>
+                Especialista en Otorrinolaringología
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- TEXTO -->
+        <div class="about-text">
+
+          <p>
+            Con más de 10 años de experiencia en otorrinolaringología,
+            he dedicado mi carrera a cuidar la salud del oído, la nariz,
+            la garganta y la voz, brindando una atención médica de
+            excelencia con un enfoque cercano y humano.
+          </p>
+
+
+          <p>
+            Mi formación especializada y actualización constante en los
+            avances de la disciplina me permiten ofrecer diagnósticos
+            precisos y tratamientos personalizados para cada paciente.
+          </p>
+
+
+          <p>
+            Creo que la medicina va más allá de aliviar síntomas:
+            implica escuchar, comprender y acompañar a cada persona
+            para encontrar la mejor solución y alcanzar un bienestar
+            integral.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- VALORES -->
+      <div class="values-grid">
+
+
+        <article class="value-card">
+
+          <div class="icon">
+
+            <i
+              class="fa-solid fa-heart-pulse"
+              aria-hidden="true"
+            ></i>
+
+          </div>
+
+          <h3>
+            Compromiso
+          </h3>
+
+          <p>
+            Una atención responsable y dedicada al bienestar
+            de cada paciente.
+          </p>
+
+        </article>
+
+
+        <article class="value-card">
+
+          <div class="icon">
+
+            <i
+              class="fa-solid fa-hand-holding-heart"
+              aria-hidden="true"
+            ></i>
+
+          </div>
+
+          <h3>
+            Cercanía
+          </h3>
+
+          <p>
+            Escucha, acompañamiento y atención personalizada.
+          </p>
+
+        </article>
+
+
+        <article class="value-card">
+
+          <div class="icon">
+
+            <i
+              class="fa-solid fa-microscope"
+              aria-hidden="true"
+            ></i>
+
+          </div>
+
+          <h3>
+            Actualización
+          </h3>
+
+          <p>
+            Formación continua y actualización en los avances
+            de la especialidad.
+          </p>
+
+        </article>
+
+
+        <article class="value-card">
+
+          <div class="icon">
+
+            <i
+              class="fa-solid fa-stethoscope"
+              aria-hidden="true"
+            ></i>
+
+          </div>
+
+          <h3>
+            Experiencia
+          </h3>
+
+          <p>
+            Más de 10 años dedicados al cuidado de la salud
+            otorrinolaringológica.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+    FORMACIÓN Y TRAYECTORIA
+    ===================================================== -->
+
+    <section
+      class="section tinted"
+      id="formacion"
+    >
+
+      <div class="section-heading">
+
+        <h2>
+          Formación y Trayectoria
+        </h2>
+
+        <p>
+          Formación profesional y experiencia que respaldan
+          una atención especializada.
+        </p>
+
+        <span class="line"></span>
+
+      </div>
+
+
+      <!--
+        Cada tarjeta tiene una galería que aparece
+        al pasar el mouse.
+
+        Las imágenes se colocan dentro de:
+
+        img/trayectoria/
+
+        Ejemplo:
+        unt-1.jpg
+        unt-2.jpg
+        padilla-1.jpg
+        padilla-2.jpg
+        italiano-1.jpg
+        italiano-2.jpg
+        ninos-1.jpg
+        ninos-2.jpg
+      -->
+
+      <div class="timeline">
+
+
+        <!-- ===============================================
+        UNT
+        =============================================== -->
+
+        <article class="timeline-item trajectory-card">
+
+          <div class="timeline-icon">
+
+            <i
+              class="fa-solid fa-graduation-cap"
+              aria-hidden="true"
+            ></i>
+
+          </div>
+
+
+          <div class="timeline-content">
+
+            <h3>
+              Universidad Nacional de Tucumán
+            </h3>
+
+            <p>
+              Formación médica y preparación profesional.
+            </p>
+
+
+            <!-- GALERÍA HOVER -->
+            <div class="trajectory-gallery">
+
+              <img
+                src="img/trayectoria/unt-1.jpg"
+                alt="Universidad Nacional de Tucumán"
+              >
+
+              <img
+                src="img/trayectoria/unt-2.jpg"
+                alt="Formación en la Universidad Nacional de Tucumán"
+              >
+
+              <img
+                src="img/trayectoria/unt-3.jpg"
+                alt="Trayectoria universitaria"
+              >
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ===============================================
+        HOSPITAL PADILLA
+        =============================================== -->
+
+        <article class="timeline-item trajectory-card">
+
+          <div class="timeline-icon">
+
+            <i
+              class="fa-solid fa-hospital"
+              aria-hidden="true"
+            ></i>
+
+          </div>
+
+
+          <div class="timeline-content">
+
+            <h3>
+              Hospital Padilla
+            </h3>
+
+            <p>
+              Formación y experiencia hospitalaria vinculada
+              a la especialidad.
+            </p>
+
+
+            <!-- GALERÍA HOVER -->
+            <div class="trajectory-gallery">
+
+              <img
+                src="img/trayectoria/padilla-1.jpg"
+                alt="Hospital Padilla"
+              >
+
+              <img
+                src="img/trayectoria/padilla-2.jpg"
+                alt="Experiencia en Hospital Padilla"
+              >
+
+              <img
+                src="img/trayectoria/padilla-3.jpg"
+                alt="Trayectoria hospitalaria"
+              >
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ===============================================
+        HOSPITAL ITALIANO
+        =============================================== -->
+
+        <article class="timeline-item trajectory-card">
+
+          <div class="timeline-icon">
+
+            <i
+              class="fa-solid fa-plane"
+              aria-hidden="true"
+            ></i>
+
+          </div>
+
+
+          <div class="timeline-content">
+
+            <h3>
+              Hospital Italiano de Buenos Aires
+            </h3>
+
+            <p>
+              Formación y actualización profesional en una
+              institución de referencia.
+            </p>
+
+
+            <!-- GALERÍA HOVER -->
+            <div class="trajectory-gallery">
+
+              <img
+                src="img/trayectoria/italiano-1.jpg"
+                alt="Hospital Italiano de Buenos Aires"
+              >
+
+              <img
+                src="img/trayectoria/italiano-2.jpg"
+                alt="Formación profesional"
+              >
+
+              <img
+                src="img/trayectoria/italiano-3.jpg"
+                alt="Actualización profesional"
+              >
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ===============================================
+        HOSPITAL DE NIÑOS
+        =============================================== -->
+
+        <article class="timeline-item trajectory-card">
+
+          <div class="timeline-icon">
+
+            <i
+              class="fa-solid fa-hospital-user"
+              aria-hidden="true"
+            ></i>
+
+          </div>
+
+
+          <div class="timeline-content">
+
+            <h3>
+              Hospital de Niños
+            </h3>
+
+            <p>
+              Experiencia relacionada con la atención
+              otorrinolaringológica.
+            </p>
+
+
+            <!-- GALERÍA HOVER -->
+            <div class="trajectory-gallery">
+
+              <img
+                src="img/trayectoria/ninos-1.jpg"
+                alt="Hospital de Niños"
+              >
+
+              <img
+                src="img/trayectoria/ninos-2.jpg"
+                alt="Experiencia hospitalaria"
+              >
+
+              <img
+                src="img/trayectoria/ninos-3.jpg"
+                alt="Trayectoria profesional"
+              >
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+
+      <!-- =================================================
+      CERTIFICACIONES
+      ================================================= -->
+
+      <div class="certifications">
+
+        <div class="certifications-header">
+
+          <span class="certifications-label">
+            ACREDITACIONES PROFESIONALES
+          </span>
+
+          <h2>
+            Certificaciones y Membresías
+          </h2>
+
+          <p>
+            Formación profesional, recertificación y pertenencia
+            a instituciones vinculadas a la especialidad.
+          </p>
+
+        </div>
+
+
+        <div class="cert-grid">
+
+
+          <div class="cert-card">
+
+            <div class="cert-icon">
+
+              <i
+                class="fa-solid fa-certificate"
+                aria-hidden="true"
+              ></i>
+
+            </div>
+
+
+            <div class="cert-content">
+
+              <h3>
+                Recertificación de la especialidad
+              </h3>
+
+              <p>
+                Consejo de Certificación y Recertificación
+                de Especialidades Médicas.
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="cert-card">
+
+            <div class="cert-icon">
+
+              <i
+                class="fa-solid fa-certificate"
+                aria-hidden="true"
+              ></i>
+
+            </div>
+
+
+            <div class="cert-content">
+
+              <h3>
+                Sociedad Tucumana de Otorrinolaringología
+              </h3>
+
+              <p>
+                Miembro de la Sociedad Tucumana
+                de Otorrinolaringología.
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="cert-card">
+
+            <div class="cert-icon">
+
+              <i
+                class="fa-solid fa-certificate"
+                aria-hidden="true"
+              ></i>
+
+            </div>
+
+
+            <div class="cert-content">
+
+              <h3>
+                Federación Argentina de Sociedades de ORL
+              </h3>
+
+              <p>
+                Miembro de la Federación Argentina
+                de Sociedades de Otorrinolaringología.
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="cert-card">
+
+            <div class="cert-icon">
+
+              <i
+                class="fa-solid fa-certificate"
+                aria-hidden="true"
+              ></i>
+
+            </div>
+
+
+            <div class="cert-content">
+
+              <h3>
+                Círculo Médico del Sur
+              </h3>
+
+              <p>
+                Miembro del Círculo Médico del Sur.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+    SERVICIOS
+    ===================================================== -->
+
+    <section
+      class="section tinted services-section"
+      id="servicios"
+    >
+
+      <div class="section-heading">
+
+        <h2>
+          Servicios Médicos
+        </h2>
+
+        <p>
+          Atención médica integral con tecnología de vanguardia
+          y trato personalizado.
+        </p>
+
+        <span class="line"></span>
+
+      </div>
+
+
+      <div class="cards-grid services">
+
+
+        <!-- ===============================================
+        1. CONSULTAS
+        =============================================== -->
+
+        <article class="service-card service-highlight">
+
+          <div class="icon">
+
+            <i
+              class="fa-solid fa-user-doctor"
+              aria-hidden="true"
+            ></i>
+
+          </div>
+
+
+          <h3>
+            Consultas Especializadas
+          </h3>
+
+
+          <p>
+            Atención personalizada para evaluar síntomas,
+            realizar diagnósticos y definir el tratamiento
+            adecuado para cada paciente.
+          </p>
+
+
+          <h4>
+            Áreas de atención:
+          </h4>
+
+
+          <ul>
+
+            <li>Oído</li>
+
+            <li>Nariz</li>
+
+            <li>Garganta</li>
+
+            <li>Voz</li>
+
+          </ul>
+
+        </article>
+
+
+
+        <!-- ===============================================
+        2. ESTUDIOS
+        =============================================== -->
+
+        <article class="service-card">
+
+          <div class="icon">
+
+            <i
+              class="fa-solid fa-microscope"
+              aria-hidden="true"
+            ></i>
+
+          </div>
+
+
+          <h3>
+            Estudios Médicos
+          </h3>
+
+
+          <p>
+            Evaluación especializada de garganta, nariz y oído
+            para lograr diagnósticos precisos.
+          </p>
+
+
+          <h4>
+            Estudios disponibles:
+          </h4>
+
+
+          <ul>
+
+            <li>
+              Rinofibrolaringoscopia
+            </li>
+
+            <li>
+              Fibroscopia
+            </li>
+
+            <li>
+              Rinoscopia
+            </li>
+
+            <li>
+              Otomicroscopia
+            </li>
+
+            <li>
+              Laringoscopia
+            </li>
+
+          </ul>
+
+        </article>
+
+
+
+        <!-- ===============================================
+        3. CIRUGÍAS
+        =============================================== -->
+
+        <article class="service-card">
+
+          <div class="icon">
+
+            <i
+              class="fa-solid fa-stethoscope"
+              aria-hidden="true"
+            ></i>
+
+          </div>
+
+
+          <h3>
+            Cirugías
+          </h3>
+
+
+          <p>
+            Procedimientos de otorrinolaringología para garganta,
+            nariz y oído, con evaluación personalizada.
+          </p>
+
+
+          <h4>
+            Otorrinolaringología:
+          </h4>
+
+
+          <p class="service-subtitle">
+            Garganta, nariz y oído
+          </p>
+
+
+          <ul>
+
+            <li>
+              Amigdalectomía
+            </li>
+
+            <li>
+              Adenoidectomía
+            </li>
+
+            <li>
+              Cirugía funcional de nariz
+            </li>
+
+            <li>
+              Cirugía estética de nariz
+            </li>
+
+            <li>
+              Cirugías de oído
+            </li>
+
+          </ul>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+    OPINIONES
+    ===================================================== -->
+
+    <section
+      class="section testimonials-section"
+      id="testimonios"
+    >
+
+      <div class="section-heading">
+
+        <h2>
+          Opiniones de Pacientes
+        </h2>
+
+        <p>
+          La confianza de nuestros pacientes es parte fundamental
+          de nuestra atención.
+        </p>
+
+        <span class="line"></span>
+
+      </div>
+
+
+      <div class="testimonials-grid">
+
+
+        <article class="testimonial-card">
+
+          <div class="testimonial-stars">
+
+            <i class="fa-solid fa-star"></i>
+
+            <i class="fa-solid fa-star"></i>
+
+            <i class="fa-solid fa-star"></i>
+
+            <i class="fa-solid fa-star"></i>
+
+            <i class="fa-solid fa-star"></i>
+
+          </div>
+
+
+          <p class="testimonial-text">
+            “Excelente atención, muy profesional y siempre dispuesto
+            a explicar cada detalle.”
+          </p>
+
+
+          <div class="testimonial-author">
+
+            <div class="testimonial-avatar">
+
+              <i class="fa-solid fa-user"></i>
+
+            </div>
+
+
+            <div>
+
+              <strong>
+                Paciente
+              </strong>
+
+              <span>
+                Consulta médica
+              </span>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="testimonial-card">
+
+          <div class="testimonial-stars">
+
+            <i class="fa-solid fa-star"></i>
+
+            <i class="fa-solid fa-star"></i>
+
+            <i class="fa-solid fa-star"></i>
+
+            <i class="fa-solid fa-star"></i>
+
+            <i class="fa-solid fa-star"></i>
+
+          </div>
+
+
+          <p class="testimonial-text">
+            “Una atención muy cálida y profesional. Me sentí
+            acompañado durante todo el proceso.”
+          </p>
+
+
+          <div class="testimonial-author">
+
+            <div class="testimonial-avatar">
+
+              <i class="fa-solid fa-user"></i>
+
+            </div>
+
+
+            <div>
+
+              <strong>
+                Paciente
+              </strong>
+
+              <span>
+                Consulta médica
+              </span>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="testimonial-card">
+
+          <div class="testimonial-stars">
+
+            <i class="fa-solid fa-star"></i>
+
+            <i class="fa-solid fa-star"></i>
+
+            <i class="fa-solid fa-star"></i>
+
+            <i class="fa-solid fa-star"></i>
+
+            <i class="fa-solid fa-star"></i>
+
+          </div>
+
+
+          <p class="testimonial-text">
+            “Muy recomendable. La atención fue excelente y me brindó
+            mucha tranquilidad.”
+          </p>
+
+
+          <div class="testimonial-author">
+
+            <div class="testimonial-avatar">
+
+              <i class="fa-solid fa-user"></i>
+
+            </div>
+
+
+            <div>
+
+              <strong>
+                Paciente
+              </strong>
+
+              <span>
+                Consulta médica
+              </span>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+      <!-- MÉTRICAS -->
+      <div class="patient-metrics">
+
+        <article class="metric-card">
+
+          <strong>
+            98%
+          </strong>
+
+          <h3>
+            Satisfacción
+          </h3>
+
+          <p>
+            Pacientes satisfechos con la atención recibida.
+          </p>
+
+        </article>
+
+
+        <article class="metric-card">
+
+          <strong>
+            500+
+          </strong>
+
+          <h3>
+            Opiniones 5★
+          </h3>
+
+          <p>
+            Valoraciones positivas de nuestros pacientes.
+          </p>
+
+        </article>
+
+
+        <article class="metric-card">
+
+          <strong>
+            95%
+          </strong>
+
+          <h3>
+            Recomendación
+          </h3>
+
+          <p>
+            Pacientes que recomiendan la atención.
+          </p>
+
+        </article>
+
+
+        <article class="metric-card">
+
+          <strong>
+            24/7
+          </strong>
+
+          <h3>
+            Seguimiento
+          </h3>
+
+          <p>
+            Acompañamiento y seguimiento de cada paciente.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+    CONSULTORIO
+    ===================================================== -->
+
+    <section
+      class="section tinted"
+      id="galeria"
+    >
+
+      <div class="section-heading">
+
+        <h2>
+          Consultorio
+        </h2>
+
+        <p>
+          Instalaciones modernas diseñadas para brindarte
+          comodidad y confianza.
+        </p>
+
+        <span class="line"></span>
+
+      </div>
+
+
+      <div class="consultorio-features">
+
+
+        <article>
+
+          <div class="mini-icon">
+
+            <i
+              class="fa-solid fa-location-dot"
+              aria-hidden="true"
+            ></i>
+
+          </div>
+
+          <h3>
+            Ubicación Central
+          </h3>
+
+          <p>
+            Fácil acceso y estacionamiento.
+          </p>
+
+        </article>
+
+
+
+        <article>
+
+          <div class="mini-icon">
+
+            <i
+              class="fa-solid fa-soap"
+              aria-hidden="true"
+            ></i>
+
+          </div>
+
+          <h3>
+            Ambiente Limpio
+          </h3>
+
+          <p>
+            Protocolos de higiene estrictos.
+          </p>
+
+        </article>
+
+
+
+        <article>
+
+          <div class="mini-icon">
+
+            <i
+              class="fa-solid fa-microscope"
+              aria-hidden="true"
+            ></i>
+
+          </div>
+
+          <h3>
+            Tecnología Avanzada
+          </h3>
+
+          <p>
+            Equipos de última generación.
+          </p>
+
+        </article>
+
+
+
+        <article>
+
+          <div class="mini-icon">
+
+            <i
+              class="fa-solid fa-couch"
+              aria-hidden="true"
+            ></i>
+
+          </div>
+
+          <h3>
+            Comodidad
+          </h3>
+
+          <p>
+            Espacios diseñados para tu bienestar.
+          </p>
+
+        </article>
+
+      </div>
+
+
+      <div class="gallery">
+
+        <img
+          src="img/consultorio-1.jpg"
+          alt="Consultorio médico"
+        >
+
+        <img
+          src="img/consultorio-2.jpg"
+          alt="Equipamiento del consultorio"
+        >
+
+        <img
+          src="img/consultorio-3.jpg"
+          alt="Instalaciones del consultorio"
+        >
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+    CONTACTO
+    ===================================================== -->
+
+    <section
+      class="section"
+      id="contacto"
+    >
+
+      <div class="section-heading">
+
+        <h2>
+          Contacto
+        </h2>
+
+        <p>
+          Comunicate directamente para realizar consultas
+          o solicitar información.
+        </p>
+
+        <span class="line"></span>
+
+      </div>
+
+
+      <div class="contact-grid">
+
+
+        <!-- INFORMACIÓN -->
+        <div class="contact-info">
+
+
+          <!-- DIRECCIÓN -->
+          <article class="contact-card">
+
+            <div class="icon">
+
+              <i
+                class="fa-solid fa-location-dot"
+                aria-hidden="true"
+              ></i>
+
+            </div>
+
+
+            <h3>
+              Dirección
+            </h3>
+
+
+            <p>
+              24 de Septiembre 2070<br>
+              Concepción, Tucumán<br>
+              C.P. 4146
+            </p>
+
+          </article>
+
+
+
+          <!-- TELÉFONO -->
+          <article class="contact-card">
+
+            <div class="icon">
+
+              <i
+                class="fa-solid fa-phone"
+                aria-hidden="true"
+              ></i>
+
+            </div>
+
+
+            <h3>
+              Teléfono
+            </h3>
+
+
+            <p>
+
+              <strong>
+                Tel. fijo:
+              </strong>
+
+              <a href="tel:+543865425356">
+                3865 425356
+              </a>
+
+            </p>
+
+          </article>
+
+
+
+          <!-- WHATSAPP -->
+          <article class="contact-card whatsapp-card">
+
+            <div class="icon">
+
+              <i
+                class="fa-brands fa-whatsapp"
+                aria-hidden="true"
+              ></i>
+
+            </div>
+
+
+            <h3>
+              WhatsApp
+            </h3>
+
+
+            <p>
+              Comunicate directamente por WhatsApp
+              para realizar consultas o solicitar información.
+            </p>
+
+
+            <a
+              class="btn btn-whatsapp"
+              href="https://wa.me/543865762230"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <i class="fa-brands fa-whatsapp"></i>
+
+              Escribir por WhatsApp
+
+            </a>
+
+          </article>
+
+
+
+          <!-- HORARIOS -->
+          <article class="contact-card">
+
+            <div class="icon">
+
+              <i
+                class="fa-solid fa-clock"
+                aria-hidden="true"
+              ></i>
+
+            </div>
+
+
+            <h3>
+              Horarios de Atención
+            </h3>
+
+
+            <p>
+
+              Lunes, martes, jueves y viernes<br>
+
+              <strong>
+                16:00 a 21:00 hs.
+              </strong>
+
+            </p>
+
+          </article>
+
+        </div>
+
+
+        <!-- =================================================
+        SOLICITAR TURNO
+        ================================================= -->
+
+        <div
+          class="contact-appointment"
+          id="turnos-centro-medico"
+        >
+
+          <div class="appointment-box">
+
+            <span class="appointment-icon">
+
+              <i
+                class="fa-solid fa-calendar-check"
+                aria-hidden="true"
+              ></i>
+
+            </span>
+
+
+            <h3>
+              ¿Necesitás un turno?
+            </h3>
+
+
+            <p>
+              Para solicitar un turno, ingresá directamente
+              a la sección de turnos del Centro Médico.
+            </p>
+
+
+            <!--
+              CAMBIAR ESTE ENLACE POR LA URL REAL
+              DE LA SECCIÓN DE TURNOS DEL CENTRO MÉDICO.
+            -->
+
+            <a
+              class="btn btn-primary btn-large"
+              href="#turnos-centro-medico"
+            >
+              Solicitar turno
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =====================================================
+  FOOTER
+  ===================================================== -->
+
+  <footer class="footer">
+
+    <div class="footer-grid">
+
+
+      <!-- MARCA -->
+      <div class="brand footer-brand">
+
+        <a href="#inicio">
+
+          <img
+            src="img/logo.jpeg"
+            alt="Logo Dr. Gastón A. Palacio"
+            class="brand-logo"
+          >
+
+        </a>
+
+      </div>
+
+
+
+      <!-- INFORMACIÓN -->
+      <div>
+
+        <h3>
+          Información
+        </h3>
+
+
+        <a href="#sobre-mi">
+          Sobre el Doctor
+        </a>
+
+        <a href="#formacion">
+          Formación y trayectoria
+        </a>
+
+        <a href="#servicios">
+          Servicios
+        </a>
+
+        <a href="#galeria">
+          Consultorio
+        </a>
+
+        <a href="#contacto">
+          Contacto
+        </a>
+
+      </div>
+
+
+
+      <!-- CONTACTO -->
+      <div>
+
+        <h3>
+          Contacto
+        </h3>
+
+
+        <p>
+
+          <i
+            class="fa-solid fa-location-dot"
+            aria-hidden="true"
+          ></i>
+
+          24 de Septiembre 2070<br>
+          Concepción, Tucumán<br>
+          C.P. 4146
+
+        </p>
+
+
+        <p>
+
+          <i
+            class="fa-solid fa-phone"
+            aria-hidden="true"
+          ></i>
+
+          3865 425356
+
+        </p>
+
+
+        <p>
+
+          <i
+            class="fa-brands fa-whatsapp"
+            aria-hidden="true"
+          ></i>
+
+          3865 76-2230
+
+        </p>
+
+      </div>
+
+
+
+      <!-- HORARIOS -->
+      <div>
+
+        <h3>
+          Horarios
+        </h3>
+
+
+        <p>
+          Lunes, martes,<br>
+          jueves y viernes
+        </p>
+
+
+        <div class="professional">
+
+          16:00 a 21:00 hs.
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- FOOTER BOTTOM -->
+    <div class="footer-bottom">
+
+      <span>
+
+        ©
+        <span id="year"></span>
+
+        Dr. Gastón Antonio Palacio.
+        Todos los derechos reservados.
+
+      </span>
+
 
       <span>
         Otorrinolaringología
@@ -44,1397 +1839,16 @@
 
     </div>
 
-  </div>
+  </footer>
 
-  <button
-    class="menu-toggle"
-    id="menuToggle"
-    aria-label="Abrir menú"
-    type="button"
-  >
-    ☰
-  </button>
 
-  <nav class="nav" id="nav">
 
-    <a href="#inicio">Inicio</a>
-    <a href="#sobre-mi">Sobre Mí</a>
-    <a href="#formacion">Formación</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#testimonios">Opiniones</a>
-    <a href="#galeria">Consultorio</a>
-    <a href="#contacto">Contacto</a>
+  <!-- =====================================================
+  JAVASCRIPT
+  ===================================================== -->
 
-  </nav>
-
-  <div class="header-actions">
-
-    <a
-      class="btn btn-outline btn-call"
-      href="tel:+543865425356"
-    >
-      <i class="fa-solid fa-phone" aria-hidden="true"></i>
-      <span>Llamar</span>
-    </a>
-
-    <button
-      class="btn btn-primary"
-      type="button"
-      data-open-appointment
-    >
-      Agendar turno
-    </button>
-
-  </div>
-
-</header>
-
-
-<main id="inicio">
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<section class="hero">
-
-  <div class="hero-copy">
-
-    <span class="eyebrow">
-      ESPECIALISTA EN OTORRINOLARINGOLOGÍA
-    </span>
-
-    <h1>
-      Tu salud
-      <span>auditiva, respiratoria y vocal</span>
-      es mi prioridad.
-    </h1>
-
-    <p>
-      Como especialista en otorrinolaringología, te ofrezco una
-      atención cercana y personalizada, respaldada por tecnología
-      de vanguardia y más de 10 años de experiencia al cuidado
-      de tu bienestar.
-    </p>
-
-    <div class="hero-buttons">
-
-      <button
-        class="btn btn-primary btn-large"
-        type="button"
-        data-open-appointment
-      >
-        Solicitar turno
-      </button>
-
-      <a
-        class="btn btn-outline btn-large"
-        href="#contacto"
-      >
-        Contactar
-      </a>
-
-    </div>
-
-    <div class="hero-trust">
-
-      <span>
-        <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
-        +10 años de experiencia
-      </span>
-
-      <span>
-        <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
-        Atención personalizada
-      </span>
-
-      <span>
-        <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
-        Tecnología de vanguardia
-      </span>
-
-    </div>
-
-  </div>
-
-
-  <div class="hero-visual">
-
-    <div class="image-frame">
-
-      <img
-        src="img/doctor.jpg"
-        alt="Dr. Gastón Antonio Palacio, especialista en Otorrinolaringología"
-      >
-
-    </div>
-
-    <div class="experience-card">
-
-      <span class="experience-icon" aria-hidden="true">
-        <i class="fa-solid fa-award"></i>
-      </span>
-
-      <div class="experience-content">
-
-        <span>
-          Experiencia
-        </span>
-
-        <strong>
-          +10 Años
-        </strong>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     SOBRE MI
-===================================================== -->
-
-<section class="section" id="sobre-mi">
-
-  <div class="section-heading">
-
-    <h2>Sobre el Dr. Gastón Antonio Palacio</h2>
-
-    <p>
-      Una trayectoria al servicio de la salud
-    </p>
-
-    <span class="line"></span>
-
-  </div>
-
-
-  <div class="about-grid">
-
-    <div class="about-photo">
-
-      <div class="about-photo-frame">
-
-        <img
-          src="img/doctor1.jpg"
-          alt="Dr. Gastón Antonio Palacio, especialista en Otorrinolaringología"
-        >
-
-      </div>
-
-      <div class="about-photo-caption">
-
-        <span class="about-photo-icon" aria-hidden="true">
-          <i class="fa-solid fa-user-doctor"></i>
-        </span>
-
-        <div>
-
-          <strong>
-            Dr. Gastón Antonio Palacio
-          </strong>
-
-          <span>
-            Especialista en Otorrinolaringología
-          </span>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <div class="about-text">
-
-      <p>
-        Con más de 10 años de experiencia en otorrinolaringología,
-        he dedicado mi carrera a cuidar la salud del oído, la nariz,
-        la garganta y la voz, brindando una atención médica de
-        excelencia con un enfoque cercano y humano.
-      </p>
-
-      <p>
-        Mi formación especializada y actualización constante en los
-        avances de la disciplina me permiten ofrecer diagnósticos
-        precisos y tratamientos personalizados para cada paciente.
-      </p>
-
-      <p>
-        Creo que la medicina va más allá de aliviar síntomas:
-        implica escuchar, comprender y acompañar a cada persona
-        para encontrar la mejor solución y alcanzar un bienestar
-        integral.
-      </p>
-
-    </div>
-
-
-   <div class="values-grid">
-
-  <article class="value-card">
-
-    <div class="icon">
-      <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
-    </div>
-
-    <h3>Compromiso</h3>
-
-    <p>
-      Una atención responsable y dedicada al bienestar
-      de cada paciente.
-    </p>
-
-  </article>
-
-
-  <article class="value-card">
-
-    <div class="icon">
-      <i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i>
-    </div>
-
-    <h3>Cercanía</h3>
-
-    <p>
-      Escucha, acompañamiento y atención personalizada.
-    </p>
-
-  </article>
-
-
-  <article class="value-card">
-
-    <div class="icon">
-      <i class="fa-solid fa-microscope" aria-hidden="true"></i>
-    </div>
-
-    <h3>Actualización</h3>
-
-    <p>
-      Formación continua y actualización en los avances
-      de la especialidad.
-    </p>
-
-  </article>
-
-
-  <article class="value-card">
-
-    <div class="icon">
-      <i class="fa-solid fa-stethoscope" aria-hidden="true"></i>
-    </div>
-
-    <h3>Experiencia</h3>
-
-    <p>
-      Más de 10 años dedicados al cuidado de la salud
-      otorrinolaringológica.
-    </p>
-
-  </article>
-
-</div>
-
-  </div>
-
-
-  <div class="stats">
-
-    <div>
-      <strong>+10</strong>
-      <span>Años de experiencia</span>
-    </div>
-
-    <div>
-      <strong>+5.000</strong>
-      <span>Pacientes atendidos</span>
-    </div>
-
-    <div>
-      <strong>100%</strong>
-      <span>Atención personalizada</span>
-    </div>
-
-    <div>
-      <strong>24/7</strong>
-      <span>Seguimiento</span>
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     FORMACIÓN
-===================================================== -->
-
-<section class="section tinted" id="formacion">
-
-  <div class="section-heading">
-
-    <h2>Formación y Trayectoria</h2>
-
-    <p>
-      Formación profesional y experiencia que respaldan
-      una atención especializada.
-    </p>
-
-    <span class="line"></span>
-
-  </div>
-
-
-  <div class="timeline">
-
-    <article class="timeline-item">
-
-      <div class="timeline-icon">
-        <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
-      </div>
-
-      <div class="timeline-content">
-
-        <h3>Universidad Nacional de Tucumán</h3>
-
-        <p>
-          Formación médica y preparación profesional.
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="timeline-item">
-
-      <div class="timeline-icon">
-        <i class="fa-solid fa-hospital" aria-hidden="true"></i>
-      </div>
-
-      <div class="timeline-content">
-
-        <h3>Hospital Padilla</h3>
-
-        <p>
-          Formación y experiencia hospitalaria vinculada
-          a la especialidad.
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="timeline-item">
-
-      <div class="timeline-icon">
-        <i class="fa-solid fa-plane" aria-hidden="true"></i>
-      </div>
-
-      <div class="timeline-content">
-
-        <h3>Hospital Italiano de Buenos Aires</h3>
-
-        <p>
-          Formación y actualización profesional en una
-          institución de referencia.
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <article class="timeline-item">
-
-      <div class="timeline-icon">
-        <i class="fa-solid fa-hospital-user" aria-hidden="true"></i>
-      </div>
-
-      <div class="timeline-content">
-
-        <h3>Hospital de Niños</h3>
-
-        <p>
-          Experiencia relacionada con la atención
-          otorrinolaringológica.
-        </p>
-
-      </div>
-
-    </article>
-
-  </div>
-
-
-  <div class="certifications">
-
-    <div class="certifications-header">
-
-      <span class="certifications-label">
-        ACREDITACIONES PROFESIONALES
-      </span>
-
-      <h2>
-        Certificaciones y Membresías
-      </h2>
-
-      <p>
-        Formación profesional, recertificación y pertenencia
-        a instituciones vinculadas a la especialidad.
-      </p>
-
-    </div>
-
-
-    <div class="cert-grid">
-
-      <div class="cert-card">
-
-        <div class="cert-icon">
-          <i class="fa-solid fa-certificate" aria-hidden="true"></i>
-        </div>
-
-        <div class="cert-content">
-
-          <h3>
-            Recertificación de la especialidad
-          </h3>
-
-          <p>
-            Consejo de Certificación y Recertificación
-            de Especialidades Médicas.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <div class="cert-card">
-
-        <div class="cert-icon">
-          <i class="fa-solid fa-certificate" aria-hidden="true"></i>
-        </div>
-
-        <div class="cert-content">
-
-          <h3>
-            Sociedad Tucumana de Otorrinolaringología
-          </h3>
-
-          <p>
-            Miembro de la Sociedad Tucumana
-            de Otorrinolaringología.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <div class="cert-card">
-
-        <div class="cert-icon">
-          <i class="fa-solid fa-certificate" aria-hidden="true"></i>
-        </div>
-
-        <div class="cert-content">
-
-          <h3>
-            Federación Argentina de Sociedades de ORL
-          </h3>
-
-          <p>
-            Miembro de la Federación Argentina
-            de Sociedades de Otorrinolaringología.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <div class="cert-card">
-
-        <div class="cert-icon">
-          <i class="fa-solid fa-certificate" aria-hidden="true"></i>
-        </div>
-
-        <div class="cert-content">
-
-          <h3>
-            Círculo Médico del Sur
-          </h3>
-
-          <p>
-            Miembro del Círculo Médico del Sur.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- =====================================================
-     SERVICIOS
-===================================================== -->
-
-<section class="section tinted services-section" id="servicios">
-
-  <div class="section-heading">
-
-    <h2>Servicios Médicos</h2>
-
-    <p>
-      Atención médica integral con tecnología de vanguardia
-      y trato personalizado.
-    </p>
-
-    <span class="line"></span>
-
-  </div>
-
-
-  <div class="cards-grid services">
-
-
-    <!-- ESTUDIOS MÉDICOS -->
-    <article class="service-card">
-
-      <div class="icon">
-        <i class="fa-solid fa-microscope" aria-hidden="true"></i>
-      </div>
-
-      <h3>Estudios Médicos</h3>
-
-      <p>
-        Evaluación especializada de garganta, nariz y oído
-        para lograr diagnósticos precisos.
-      </p>
-
-      <h4>Estudios disponibles:</h4>
-
-      <ul>
-        <li>Rinofibrolaringoscopia</li>
-        <li>Fibroscopia</li>
-        <li>Rinoscopia</li>
-        <li>Otomicroscopia</li>
-        <li>Laringoscopia</li>
-      </ul>
-
-    </article>
-
-
-    <!-- CIRUGÍAS -->
-    <article class="service-card">
-
-      <div class="icon">
-        <i class="fa-solid fa-stethoscope" aria-hidden="true"></i>
-      </div>
-
-      <h3>Cirugías</h3>
-
-      <p>
-        Procedimientos de otorrinolaringología para garganta,
-        nariz y oído, con evaluación personalizada.
-      </p>
-
-      <h4>Otorrinolaringología:</h4>
-
-      <p class="service-subtitle">
-        Garganta, nariz y oído
-      </p>
-
-      <ul>
-        <li>Amigdalectomía</li>
-        <li>Adenoidectomía</li>
-        <li>Cirugía funcional de nariz</li>
-        <li>Cirugía estética de nariz</li>
-        <li>Cirugías de oído</li>
-      </ul>
-
-    </article>
-
-
-    <!-- CONSULTAS ESPECIALIZADAS -->
-    <article class="service-card service-highlight">
-
-      <div class="icon">
-        <i class="fa-solid fa-user-doctor" aria-hidden="true"></i>
-      </div>
-
-      <h3>Consultas Especializadas</h3>
-
-      <p>
-        Atención personalizada para evaluar síntomas,
-        realizar diagnósticos y definir el tratamiento
-        adecuado para cada paciente.
-      </p>
-
-      <h4>Áreas de atención:</h4>
-
-      <ul>
-        <li>Oído</li>
-        <li>Nariz</li>
-        <li>Garganta</li>
-        <li>Voz</li>
-      </ul>
-
-    </article>
-
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     OPINIONES
-===================================================== -->
-
-<section class="section testimonials-section" id="testimonios">
-
-  <div class="section-heading">
-
-    <h2>Opiniones de Pacientes</h2>
-
-    <p>
-      La confianza de nuestros pacientes es parte fundamental
-      de nuestra atención.
-    </p>
-
-    <span class="line"></span>
-
-  </div>
-
-
-  <!-- TESTIMONIOS -->
-
-  <div class="testimonials-grid">
-
-
-    <article class="testimonial-card">
-
-      <div class="testimonial-stars">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-      </div>
-
-      <p class="testimonial-text">
-        “Excelente atención, muy profesional y siempre dispuesto
-        a explicar cada detalle.”
-      </p>
-
-      <div class="testimonial-author">
-
-        <div class="testimonial-avatar">
-          <i class="fa-solid fa-user"></i>
-        </div>
-
-        <div>
-          <strong>Paciente</strong>
-          <span>Consulta médica</span>
-        </div>
-
-      </div>
-
-    </article>
-
-
-    <article class="testimonial-card">
-
-      <div class="testimonial-stars">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-      </div>
-
-      <p class="testimonial-text">
-        “Una atención muy cálida y profesional. Me sentí
-        acompañado durante todo el proceso.”
-      </p>
-
-      <div class="testimonial-author">
-
-        <div class="testimonial-avatar">
-          <i class="fa-solid fa-user"></i>
-        </div>
-
-        <div>
-          <strong>Paciente</strong>
-          <span>Consulta médica</span>
-        </div>
-
-      </div>
-
-    </article>
-
-
-    <article class="testimonial-card">
-
-      <div class="testimonial-stars">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-      </div>
-
-      <p class="testimonial-text">
-        “Muy recomendable. La atención fue excelente y me brindó
-        mucha tranquilidad.”
-      </p>
-
-      <div class="testimonial-author">
-
-        <div class="testimonial-avatar">
-          <i class="fa-solid fa-user"></i>
-        </div>
-
-        <div>
-          <strong>Paciente</strong>
-          <span>Consulta médica</span>
-        </div>
-
-      </div>
-
-    </article>
-
-
-  </div>
-
-
-  <!-- MÉTRICAS -->
-
-  <div class="patient-metrics">
-
-    <article class="metric-card">
-
-      <strong>98%</strong>
-
-      <h3>Satisfacción</h3>
-
-      <p>
-        Pacientes satisfechos con la atención recibida.
-      </p>
-
-    </article>
-
-
-    <article class="metric-card">
-
-      <strong>500+</strong>
-
-      <h3>Opiniones 5★</h3>
-
-      <p>
-        Valoraciones positivas de nuestros pacientes.
-      </p>
-
-    </article>
-
-
-    <article class="metric-card">
-
-      <strong>95%</strong>
-
-      <h3>Recomendación</h3>
-
-      <p>
-        Pacientes que recomiendan la atención.
-      </p>
-
-    </article>
-
-
-    <article class="metric-card">
-
-      <strong>24/7</strong>
-
-      <h3>Seguimiento</h3>
-
-      <p>
-        Acompañamiento y seguimiento de cada paciente.
-      </p>
-
-    </article>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     CONSULTORIO
-===================================================== -->
-
-<section class="section tinted" id="galeria">
-
-  <div class="section-heading">
-
-    <h2>Consultorio</h2>
-
-    <p>
-      Instalaciones modernas diseñadas para brindarte
-      comodidad y confianza.
-    </p>
-
-    <span class="line"></span>
-
-  </div>
-
-
-  <div class="consultorio-features">
-
-    <article>
-
-      <div class="mini-icon">
-        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-      </div>
-
-      <h3>Ubicación Central</h3>
-
-      <p>
-        Fácil acceso y estacionamiento.
-      </p>
-
-    </article>
-
-
-    <article>
-
-      <div class="mini-icon">
-  <i class="fa-solid fa-soap" aria-hidden="true"></i>
-</div>
-
-      <h3>Ambiente Limpio</h3>
-
-      <p>
-        Protocolos de higiene estrictos.
-      </p>
-
-    </article>
-
-
-    <article>
-
-      <div class="mini-icon">
-        <i class="fa-solid fa-microscope" aria-hidden="true"></i>
-      </div>
-
-      <h3>Tecnología Avanzada</h3>
-
-      <p>
-        Equipos de última generación.
-      </p>
-
-    </article>
-
-
-    <article>
-
-      <div class="mini-icon">
-        <i class="fa-solid fa-couch" aria-hidden="true"></i>
-      </div>
-
-      <h3>Comodidad</h3>
-
-      <p>
-        Espacios diseñados para tu bienestar.
-      </p>
-
-    </article>
-
-  </div>
-
-
-  <div class="gallery">
-
-    <img
-      src="img/consultorio-1.jpg"
-      alt="Consultorio médico"
-    >
-
-    <img
-      src="img/consultorio-2.jpg"
-      alt="Equipamiento del consultorio"
-    >
-
-    <img
-      src="img/consultorio-3.jpg"
-      alt="Instalaciones del consultorio"
-    >
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     CONTACTO
-===================================================== -->
-
-<section class="section" id="contacto">
-
-  <div class="section-heading">
-
-    <h2>Contacto</h2>
-
-    <p>
-      Agendá tu cita o contactanos para resolver tus dudas.
-      Estamos para servirte.
-    </p>
-
-    <span class="line"></span>
-
-  </div>
-
-
-  <div class="contact-grid">
-
-    <div class="contact-info">
-
-      <article class="contact-card">
-
-        <div class="icon">
-          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-        </div>
-
-        <h3>Dirección</h3>
-
-        <p>
-          24 de Septiembre 2070<br>
-          Concepción, Tucumán<br>
-          C.P. 4146
-        </p>
-
-      </article>
-
-
-      <article class="contact-card">
-
-        <div class="icon">
-          <i class="fa-solid fa-phone" aria-hidden="true"></i>
-        </div>
-
-        <h3>Teléfonos</h3>
-
-        <p>
-
-          <strong>Tel. fijo:</strong>
-          <a href="tel:+543865425356">
-            3865 425356
-          </a>
-
-          <br>
-
-          <strong>WhatsApp:</strong>
-          <a
-            href="https://wa.me/543865762230"
-            target="_blank"
-            rel="noopener"
-          >
-            3865 76-2230
-          </a>
-
-        </p>
-
-      </article>
-
-
-      <article class="contact-card">
-
-        <div class="icon">
-          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-        </div>
-
-        <h3>Correo Electrónico</h3>
-
-        <p>
-          <a href="mailto:dr.palaciogaston@gmail.com">
-            dr.palaciogaston@gmail.com
-          </a>
-        </p>
-
-      </article>
-
-
-      <article class="contact-card">
-
-        <div class="icon">
-          <i class="fa-solid fa-clock" aria-hidden="true"></i>
-        </div>
-
-        <h3>Horarios de Atención</h3>
-
-        <p>
-          Lunes, martes, jueves y viernes<br>
-          <strong>16:00 a 21:00 hs.</strong>
-        </p>
-
-      </article>
-
-    </div>
-
-
-    <form class="contact-form" id="contactForm">
-
-      <h3>Contactanos</h3>
-
-      <p>
-        Completá el formulario y nos comunicaremos con vos.
-      </p>
-
-      <div class="form-row">
-
-        <label>
-          Nombre *
-
-          <input
-            required
-            type="text"
-            name="nombre"
-            placeholder="Tu nombre"
-          >
-
-        </label>
-
-
-        <label>
-          Correo *
-
-          <input
-            required
-            type="email"
-            name="email"
-            placeholder="tu@email.com"
-          >
-
-        </label>
-
-      </div>
-
-
-      <label>
-        Teléfono
-
-        <input
-          type="tel"
-          name="telefono"
-          placeholder="Tu teléfono"
-        >
-
-      </label>
-
-
-      <label>
-        Motivo de contacto
-
-        <input
-          type="text"
-          name="motivo"
-          placeholder="Motivo de contacto"
-        >
-
-      </label>
-
-
-      <label>
-        Mensaje *
-
-        <textarea
-          required
-          name="mensaje"
-          rows="5"
-          placeholder="Escribí tu mensaje aquí..."
-        ></textarea>
-
-      </label>
-
-
-      <button
-        class="btn btn-primary submit-btn"
-        type="submit"
-      >
-        <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
-        Enviar Mensaje
-      </button>
-
-      <p class="form-note">
-        * Campos obligatorios.
-      </p>
-
-      <p
-        class="form-message"
-        id="formMessage"
-      ></p>
-
-    </form>
-
-  </div>
-
-</section>
-
-</main>
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer class="footer">
-
-  <div class="footer-grid">
-
-    <div class="brand footer-brand">
-
-      <img
-        src="img/logo.jpeg"
-        alt="Logo Dr. Gastón A. Palacio"
-        class="brand-logo"
-      >
-
-      <span>
-
-        <strong>
-          Dr. Gastón A. Palacio
-        </strong>
-
-        <small>
-          Otorrinolaringología
-        </small>
-
-      </span>
-
-    </div>
-
-
-    <div>
-
-      <h3>Enlaces Rápidos</h3>
-
-      <a href="#sobre-mi">Sobre el Doctor</a>
-      <a href="#formacion">Formación</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#testimonios">Opiniones</a>
-      <a href="#contacto">Contacto</a>
-
-    </div>
-
-
-    <div>
-
-      <h3>Contacto</h3>
-
-      <p>
-        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-        24 de Septiembre 2070<br>
-        Concepción, Tucumán<br>
-        C.P. 4146
-      </p>
-
-      <p>
-        <i class="fa-solid fa-phone" aria-hidden="true"></i>
-        3865 425356
-      </p>
-
-      <p>
-        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-        dr.palaciogaston@gmail.com
-      </p>
-
-    </div>
-
-
-    <div>
-
-      <h3>Horarios</h3>
-
-      <p>
-        Lunes, martes,<br>
-        jueves y viernes
-      </p>
-
-      <div class="professional">
-        16:00 a 21:00 hs.<br>
-        Atención con turno previo
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <div class="footer-bottom">
-
-    <span>
-      © <span id="year"></span>
-      Dr. Gastón Antonio Palacio.
-      Todos los derechos reservados.
-    </span>
-
-    <span>
-      Otorrinolaringología
-    </span>
-
-  </div>
-
-</footer>
-
-
-<!-- =====================================================
-     MODAL DE TURNOS
-===================================================== -->
-
-<div
-  class="modal"
-  id="appointmentModal"
-  aria-hidden="true"
->
-
-  <div class="modal-box">
-
-    <button
-      class="modal-close"
-      id="modalClose"
-      aria-label="Cerrar"
-      type="button"
-    >
-      ×
-    </button>
-
-
-    <h2>Solicitar turno</h2>
-
-    <p>
-      Completá tus datos y nos comunicaremos para
-      confirmar el turno.
-    </p>
-
-
-    <form id="appointmentForm">
-
-      <label>
-
-        Nombre completo *
-
-        <input
-          required
-          type="text"
-          name="nombre"
-          placeholder="Tu nombre"
-        >
-
-      </label>
-
-
-      <label>
-
-        Teléfono *
-
-        <input
-          required
-          type="tel"
-          name="telefono"
-          placeholder="Tu teléfono"
-        >
-
-      </label>
-
-
-      <label>
-
-        Motivo de consulta
-
-        <select name="especialidad">
-
-          <option>
-            Consulta de Otorrinolaringología
-          </option>
-
-          <option>
-            Estudio de garganta, nariz u oído
-          </option>
-
-          <option>
-            Rinofibrolaringoscopia
-          </option>
-
-          <option>
-            Fibroscopia
-          </option>
-
-          <option>
-            Rinoscopia
-          </option>
-
-          <option>
-            Otomicroscopia
-          </option>
-
-          <option>
-            Laringoscopia
-          </option>
-
-          <option>
-            Consulta por cirugía
-          </option>
-
-        </select>
-
-      </label>
-
-
-      <label>
-
-        Fecha preferida
-
-        <input
-          type="date"
-          name="fecha"
-        >
-
-      </label>
-
-
-      <button
-        class="btn btn-primary submit-btn"
-        type="submit"
-      >
-        Enviar solicitud
-      </button>
-
-
-      <p
-        class="form-message"
-        id="appointmentMessage"
-      ></p>
-
-    </form>
-
-  </div>
-
-</div>
-
-
-<script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 
 </body>
+
 </html>
