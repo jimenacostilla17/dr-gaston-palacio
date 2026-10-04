@@ -408,8 +408,8 @@ div[id="turnos-centro-medico"] {
 
   color: var(--primary);
 
-  font-size: clamp(2.5rem, 4.5vw, 4.4rem);
-  font-weight: 800;
+  font-size: clamp(2rem, 4.5vw, 4.4rem);
+  font-weight: 750;
   line-height: 1.12;
 
   text-wrap: balance;
@@ -550,7 +550,7 @@ div[id="turnos-centro-medico"] {
 }
 
 .experience-content strong {
-  color: var(--primary);
+  color: #1d2939;
   font-size: 1.15rem;
 }
 
@@ -2506,4 +2506,526 @@ div[id="turnos-centro-medico"] {
     box-shadow: none;
   }
 
+}
+
+/* =====================================================
+   25. AJUSTES VISUALES FINALES
+   ===================================================== */
+
+/* HEADER: logo + nombre del profesional */
+.header {
+  display: grid;
+  grid-template-columns: minmax(230px, auto) 1fr auto;
+  align-items: center;
+  gap: clamp(18px, 2.5vw, 38px);
+  padding: 7px clamp(24px, 5vw, 7%);
+}
+
+.brand {
+  gap: 12px;
+  min-width: 0;
+}
+
+.brand-logo-link {
+  flex-shrink: 0;
+  transition: transform 0.35s ease;
+}
+
+.brand-logo-link:hover {
+  transform: translateY(-2px) scale(1.03);
+}
+
+.brand-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  line-height: 1.12;
+  color: var(--primary);
+  white-space: nowrap;
+}
+
+.brand-name span {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.brand-name strong {
+  font-size: 1.02rem;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+}
+
+/* NAV MÁS EQUILIBRADA */
+.nav {
+  justify-self: center;
+  gap: clamp(10px, 1.4vw, 22px);
+}
+
+/* HERO MÁS COMPACTO Y CENTRADO */
+.hero {
+  min-height: auto;
+  padding: 42px clamp(24px, 6vw, 7%) 48px;
+  gap: clamp(25px, 4vw, 55px);
+}
+
+.hero-copy {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-copy > p {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.hero-buttons,
+.hero-trust {
+  justify-content: center;
+}
+
+.hero h1 {
+  text-wrap: balance;
+  letter-spacing: -1.5px;
+}
+
+.hero-visual {
+  min-height: 0;
+}
+
+.image-frame {
+  box-shadow:
+    0 25px 55px rgba(0, 58, 135, 0.13),
+    0 0 0 1px rgba(0, 58, 135, 0.04);
+  animation: heroImageIn 0.9s cubic-bezier(.2,.8,.2,1) both;
+}
+
+.image-frame img {
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.7s cubic-bezier(.2,.8,.2,1);
+}
+
+.image-frame:hover img {
+  transform: scale(1.035);
+}
+
+.experience-card {
+  animation: floatingCard 4s ease-in-out infinite;
+}
+
+/* ANIMACIONES DE ENTRADA */
+.hero-copy {
+  animation: heroTextIn 0.8s cubic-bezier(.2,.8,.2,1) both;
+}
+
+.eyebrow {
+  animation: fadeUp 0.65s 0.05s ease both;
+}
+
+.hero h1 {
+  animation: fadeUp 0.7s 0.15s ease both;
+}
+
+.hero-copy > p {
+  animation: fadeUp 0.7s 0.25s ease both;
+}
+
+.hero-buttons {
+  animation: fadeUp 0.7s 0.35s ease both;
+}
+
+.hero-trust {
+  animation: fadeUp 0.7s 0.45s ease both;
+}
+
+.value-card,
+.service-card,
+.testimonial-card,
+.cert-card,
+.contact-card,
+.metric-card,
+.consultorio-features article {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.value-card:hover,
+.service-card:hover,
+.testimonial-card:hover,
+.cert-card:hover,
+.contact-card:hover,
+.metric-card:hover,
+.consultorio-features article:hover {
+  transform: translateY(-7px);
+  box-shadow: var(--shadow-hover);
+  border-color: #c9def5;
+}
+
+.gallery img {
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    filter 0.4s ease;
+}
+
+.gallery img:hover {
+  transform: translateY(-5px) scale(1.015);
+  filter: saturate(1.05);
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 30%,
+    rgba(255,255,255,.22) 50%,
+    transparent 70%
+  );
+  transform: translateX(-120%);
+  transition: transform 0.6s ease;
+}
+
+.btn:hover::before {
+  transform: translateX(120%);
+}
+
+.btn > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroTextIn {
+  from {
+    opacity: 0;
+    transform: translateX(-18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes heroImageIn {
+  from {
+    opacity: 0;
+    transform: translateX(25px) scale(.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes floatingCard {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+/* TABLETS */
+@media (max-width: 1100px) {
+  .header {
+    grid-template-columns: minmax(210px, auto) 1fr auto;
+    padding-inline: 4%;
+  }
+
+  .brand-name span {
+    font-size: 0.8rem;
+  }
+
+  .brand-name strong {
+    font-size: 0.95rem;
+  }
+
+  .nav {
+    gap: 9px;
+  }
+
+  .nav a {
+    font-size: 0.76rem;
+  }
+
+  .hero {
+    padding-inline: 4.5%;
+  }
+}
+
+/* TABLETS PEQUEÑAS / MOBILE */
+@media (max-width: 850px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 7px 5%;
+  }
+
+  .brand {
+    max-width: calc(100% - 55px);
+  }
+
+  .brand-name {
+    overflow: hidden;
+  }
+
+  .brand-name span,
+  .brand-name strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .hero {
+    padding: 48px 5% 42px;
+    gap: 30px;
+  }
+
+  .hero-copy {
+    max-width: 680px;
+  }
+
+  .hero h1 {
+    letter-spacing: -0.8px;
+  }
+
+  .hero-visual {
+    max-width: 470px;
+  }
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+  .header {
+    padding: 6px 16px;
+    min-height: 68px;
+  }
+
+  .brand {
+    gap: 9px;
+  }
+
+  .brand-logo {
+    width: 50px;
+    height: 48px;
+  }
+
+  .brand-name span {
+    font-size: 0.69rem;
+  }
+
+  .brand-name strong {
+    font-size: 0.86rem;
+  }
+
+  .menu-toggle {
+    width: 42px;
+    height: 42px;
+    font-size: 1.55rem;
+  }
+
+  .hero {
+    padding: 38px 18px 38px;
+    gap: 24px;
+  }
+
+  .eyebrow {
+    font-size: 0.67rem;
+    letter-spacing: .8px;
+  }
+
+  .hero h1 {
+    margin-bottom: 15px;
+    font-size: clamp(1.95rem, 9vw, 2.55rem);
+    line-height: 1.12;
+  }
+
+  .hero-copy > p {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .hero-buttons {
+    flex-direction: row;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .hero-buttons .btn {
+    width: 50%;
+    min-height: 48px;
+    padding-inline: 10px;
+    font-size: 0.88rem;
+  }
+
+  .hero-trust {
+    gap: 7px;
+  }
+
+  .hero-trust span {
+    font-size: 0.76rem;
+  }
+
+  .hero-visual {
+    width: 100%;
+    max-width: 390px;
+  }
+
+  .image-frame {
+    border-radius: 20px;
+  }
+
+  .image-frame img {
+    height: clamp(300px, 92vw, 365px);
+  }
+
+  .experience-card {
+    right: 3px;
+    bottom: 10px;
+  }
+
+  /* MENÚ MÓVIL */
+  .nav {
+    padding: 18px 20px 20px;
+    gap: 4px;
+    box-shadow: 0 18px 35px rgba(0, 58, 135, 0.12);
+    animation: mobileMenuIn .25s ease both;
+  }
+
+  .nav a {
+    padding: 11px 4px;
+    border-bottom: 1px solid #eef2f7;
+    font-size: 0.92rem;
+  }
+
+  .nav a:last-child {
+    border-bottom: 0;
+  }
+
+  .section {
+    padding: 45px 18px;
+  }
+
+  .section-heading {
+    margin-bottom: 28px;
+  }
+
+  .section-heading p {
+    line-height: 1.6;
+  }
+
+  .about-text p,
+  .service-card p,
+  .testimonial-text {
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .value-card,
+  .service-card,
+  .testimonial-card,
+  .cert-card,
+  .contact-card,
+  .metric-card,
+  .consultorio-features article {
+    text-align: center;
+  }
+
+  .service-card .icon,
+  .value-card .icon,
+  .contact-card .icon,
+  .mini-icon {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .service-card ul {
+    text-align: left;
+    display: inline-block;
+  }
+
+  .timeline-content {
+    text-align: left;
+  }
+
+  .gallery img {
+    height: 225px;
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+  .footer .brand {
+    justify-content: center;
+  }
+}
+
+@keyframes mobileMenuIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CELULARES MUY PEQUEÑOS */
+@media (max-width: 380px) {
+  .brand-logo {
+    width: 46px;
+    height: 44px;
+  }
+
+  .brand-name span {
+    font-size: 0.64rem;
+  }
+
+  .brand-name strong {
+    font-size: 0.8rem;
+  }
+
+  .hero {
+    padding-inline: 15px;
+  }
+
+  .hero-buttons .btn {
+    font-size: 0.82rem;
+  }
 }
