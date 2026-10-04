@@ -3575,3 +3575,29 @@ div[id="turnos-centro-medico"] {
   }
 
 }
+.cert-icon {
+  width: 75px;
+  height: 75px;
+  min-width: 75px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.cert-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+
+  transition: transform 0.3s ease;
+}
+
+.cert-card:hover .cert-icon img {
+  transform: scale(1.08);
+}
