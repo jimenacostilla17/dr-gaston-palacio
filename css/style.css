@@ -70,6 +70,7 @@ select {
 img {
   display: block;
   max-width: 100%;
+  border-radius: 10px;
 }
 
 a {
@@ -262,22 +263,24 @@ div[id="turnos-centro-medico"] {
   display: flex;
   align-items: center;
   flex-shrink: 0;
+
 }
 
 .brand-logo-link {
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .brand-logo {
   width: 65px;
-  height: 62px;
+  height: auto;
 
   object-fit: contain;
   object-position: center;
 
-  border-radius: 0;
+  
 }
 
 
@@ -1596,13 +1599,13 @@ div[id="turnos-centro-medico"] {
 
 .footer-brand .brand-logo {
   width: 85px;
-  height: 80px;
+  height: auto;
 
   object-fit: contain;
   object-position: center;
 
   background: transparent;
-  border-radius: 0;
+  border-radius: 11px;
 }
 
 
@@ -2531,9 +2534,7 @@ div[id="turnos-centro-medico"] {
   transition: transform 0.35s ease;
 }
 
-.brand-logo-link:hover {
-  transform: translateY(-2px) scale(1.03);
-}
+
 
 .brand-name {
   display: flex;
@@ -3045,12 +3046,16 @@ div[id="turnos-centro-medico"] {
    1. ANIMACIÓN DE ENTRADA GENERAL
 ===================================================== */
 
+/* =====================================================
+   1. ANIMACIÓN DE ENTRADA GENERAL (CORREGIDA)
+===================================================== */
+
 .reveal {
   opacity: 0;
-  transform: translateY(45px);
-  transition:
-    opacity 0.8s var(--animation-ease),
-    transform 0.8s var(--animation-ease);
+  transform: translateY(80px);
+  
+  /* ✅ El !important va AL FINAL de toda la línea. Así el editor no marca error */
+  transition: opacity 2s ease-out, transform 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
 }
 
 .reveal.visible {
@@ -3603,14 +3608,15 @@ div[id="turnos-centro-medico"] {
 }
 
 /* =====================================================
-   26. NUEVOS AJUSTES: LOGO Y CONTADORES
+   26. AJUSTES DEL LOGO (bordeado suave, sin escala)
 ===================================================== */
 
 /* 1. Logo con bordes redondeados y animación sutil */
 .brand-logo {
-  border-radius: 12px !important; /* Bordes redondeados */
-  transition: border-radius 0.3s ease, transform 0.3s ease;
-  animation: logoSutil 4s ease-in-out infinite; /* Movimiento continuo y suave */
+  box-shadow: 0 2px 8px rgba(0, 58, 135, 0.08); 
+  border-radius: 11px;
+  transition: box-shadow 0.3s ease;
+  animation: logoSutil 4s ease-in-out infinite;
 }
 
 /* Animación de "flotación" muy sutil para el logo */
@@ -3619,11 +3625,11 @@ div[id="turnos-centro-medico"] {
   50% { transform: translateY(-4px); } 
 }
 
-/* Al hacer hover, pausamos la animación para que el efecto hover original funcione limpio */
+/* Al hacer hover, pausamos la animación y solo cambiamos la sombra */
 .brand-logo-link:hover .brand-logo {
-  animation: none;
-  transform: translateY(-2px) scale(1.03);
-  border-radius: 14px;
+  animation: none; /* Pausa la flotación al pasar el mouse */
+  box-shadow: 0 4px 14px rgba(0, 58, 135, 0.14); /* Sombra un poco más marcada */
+  /* ❌ Eliminada la línea transform: translateY(-2px) scale(1.03); */
 }
 
 /* 2. Estilo base para los números que van a contar */
