@@ -3601,3 +3601,32 @@ div[id="turnos-centro-medico"] {
 .cert-card:hover .cert-icon img {
   transform: scale(1.08);
 }
+
+/* =====================================================
+   26. NUEVOS AJUSTES: LOGO Y CONTADORES
+===================================================== */
+
+/* 1. Logo con bordes redondeados y animación sutil */
+.brand-logo {
+  border-radius: 12px !important; /* Bordes redondeados */
+  transition: border-radius 0.3s ease, transform 0.3s ease;
+  animation: logoSutil 4s ease-in-out infinite; /* Movimiento continuo y suave */
+}
+
+/* Animación de "flotación" muy sutil para el logo */
+@keyframes logoSutil {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); } 
+}
+
+/* Al hacer hover, pausamos la animación para que el efecto hover original funcione limpio */
+.brand-logo-link:hover .brand-logo {
+  animation: none;
+  transform: translateY(-2px) scale(1.03);
+  border-radius: 14px;
+}
+
+/* 2. Estilo base para los números que van a contar */
+.counter-number {
+  display: inline-block;
+}
