@@ -3046,15 +3046,11 @@ div[id="turnos-centro-medico"] {
    1. ANIMACIÓN DE ENTRADA GENERAL
 ===================================================== */
 
-/* =====================================================
-   1. ANIMACIÓN DE ENTRADA GENERAL (CORREGIDA)
-===================================================== */
 
 .reveal {
   opacity: 0;
   transform: translateY(80px);
   
-  /* ✅ El !important va AL FINAL de toda la línea. Así el editor no marca error */
   transition: opacity 2s ease-out, transform 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
 }
 
@@ -3611,7 +3607,6 @@ div[id="turnos-centro-medico"] {
    26. AJUSTES DEL LOGO (bordeado suave, sin escala)
 ===================================================== */
 
-/* 1. Logo con bordes redondeados y animación sutil */
 .brand-logo {
   box-shadow: 0 2px 8px rgba(0, 58, 135, 0.08); 
   border-radius: 11px;
@@ -3619,20 +3614,135 @@ div[id="turnos-centro-medico"] {
   animation: logoSutil 4s ease-in-out infinite;
 }
 
-/* Animación de "flotación" muy sutil para el logo */
 @keyframes logoSutil {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-4px); } 
 }
 
-/* Al hacer hover, pausamos la animación y solo cambiamos la sombra */
 .brand-logo-link:hover .brand-logo {
-  animation: none; /* Pausa la flotación al pasar el mouse */
-  box-shadow: 0 4px 14px rgba(0, 58, 135, 0.14); /* Sombra un poco más marcada */
-  /* ❌ Eliminada la línea transform: translateY(-2px) scale(1.03); */
+  animation: none; 
+  box-shadow: 0 4px 14px rgba(0, 58, 135, 0.14); 
 }
 
-/* 2. Estilo base para los números que van a contar */
 .counter-number {
   display: inline-block;
+}
+/* =====================================================
+   EFECTO ESCRITURA PALABRA POR PALABRA (SIMPLIFICADO)
+===================================================== */
+
+.about-text.parrafos-cascada {
+  position: relative;
+  padding: 35px 35px 35px 40px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+  border-left: 5px solid var(--primary);
+  border-radius: 0 18px 18px 0;
+  box-shadow: 0 10px 30px rgba(0, 58, 135, 0.08);
+  margin: 20px 0;
+}
+
+.about-text.parrafos-cascada::before {
+  content: "“";
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  font-size: 140px;
+  color: var(--primary);
+  opacity: 0.08;
+  font-family: Georgia, serif;
+  line-height: 1;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.about-text.parrafos-cascada p {
+  position: relative;
+  z-index: 1;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--text);
+  margin-bottom: 22px;
+}
+
+.about-text.parrafos-cascada p:last-child {
+  margin-bottom: 0;
+}
+
+/* Cada palabra empieza invisible */
+.about-text.parrafos-cascada .palabra {
+  opacity: 0;
+  display: inline-block;
+  transform: translateY(10px);
+}
+
+
+/* =====================================================
+   COLORES PARA PALABRAS CLAVE EN "SOBRE MÍ"
+===================================================== */
+
+/* Azul oscuro (fuerte) - para números y conceptos clave */
+.about-text.parrafos-cascada .palabra.azul-fuerte {
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 1em;
+}
+
+/* Azul claro - para conceptos secundarios */
+.about-text.parrafos-cascada .palabra.azul-claro {
+  color: var(--primary-light);
+  font-weight: 700;
+}
+
+
+
+/* Cuando el contenedor es visible, se animan */
+.about-text.parrafos-cascada.visible .palabra {
+  animation: palabraAparece 0.3s ease forwards;
+}
+
+/* Animación rápida y suave */
+@keyframes palabraAparece {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .about-text.parrafos-cascada { padding: 25px 20px; }
+  .about-text.parrafos-cascada::before { font-size: 100px; top: -10px; left: 10px; }
+  .about-text.parrafos-cascada p { font-size: 1rem; }
+}
+
+/* =====================================================
+   CARRUSEL DE TESTIMONIOS (RESPONSIVE)
+===================================================== */
+
+.carrusel-testimonios {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carrusel-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  width: 100%;
+}
+
+.carrusel-testimonios .testimonial-card {
+  width: 100%; /* ✅ Cambiado de min-width a width */
+  flex-shrink: 0;
+  padding: 35px;
+  box-sizing: border-box;
+}
+
+/* Responsive para móviles */
+@media (max-width: 600px) {
+  .carrusel-testimonios .testimonial-card {
+    width: 100%; /* ✅ Forzar 100% en móvil */
+    padding: 25px 20px;
+  }
 }
