@@ -3601,3 +3601,318 @@ div[id="turnos-centro-medico"] {
 .cert-card:hover .cert-icon img {
   transform: scale(1.08);
 }
+/* =====================================================
+   MAPA DE UBICACIÓN
+===================================================== */
+
+.location-map {
+  width: 100%;
+  margin-top: 30px;
+  padding: 25px;
+
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow);
+}
+
+.map-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  margin-bottom: 20px;
+}
+
+.map-icon {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--primary-light);
+  background: var(--primary-soft);
+
+  border-radius: 14px;
+
+  font-size: 1.2rem;
+}
+
+.map-header span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: var(--primary-light);
+
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.map-header h3 {
+  margin-bottom: 3px;
+
+  color: var(--primary);
+
+  font-size: 1.2rem;
+}
+
+.map-header p {
+  margin: 0;
+
+  color: var(--text-light);
+
+  font-size: 0.9rem;
+}
+
+.map-container {
+  width: 100%;
+  height: 380px;
+
+  overflow: hidden;
+
+  border-radius: 15px;
+  border: 1px solid var(--border);
+
+  background: #eef3f8;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  border: 0;
+}
+
+.map-button {
+  margin-top: 18px;
+}
+
+
+/* =====================================================
+   MENÚ RESPONSIVE - TABLET Y CELULAR
+===================================================== */
+
+@media (max-width: 850px) {
+
+  .header {
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    padding: 7px 5%;
+
+    background: rgba(255, 255, 255, 0.98);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .brand {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .menu-toggle {
+    display: flex;
+
+    width: 44px;
+    height: 44px;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    color: var(--primary);
+
+    background: transparent;
+
+    border: none;
+
+    font-size: 1.8rem;
+    line-height: 1;
+
+    cursor: pointer;
+  }
+
+  .header-actions {
+    display: none;
+  }
+
+  /*
+    IMPORTANTE:
+    El JavaScript utiliza .open.
+    Por eso el CSS también debe utilizar .open.
+  */
+
+  .nav {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 0;
+
+    padding: 10px 5% 18px;
+
+    background: rgba(255, 255, 255, 0.99);
+
+    border-bottom: 1px solid var(--border);
+
+    box-shadow: 0 15px 35px rgba(0, 58, 135, 0.12);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-10px);
+
+    pointer-events: none;
+
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease,
+      visibility 0.25s ease;
+  }
+
+  /*
+    ESTE ES EL CAMBIO IMPORTANTE
+  */
+
+  .nav.open {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+
+    pointer-events: auto;
+  }
+
+  .nav a {
+    width: 100%;
+
+    padding: 13px 5px;
+
+    color: var(--text);
+
+    border-bottom: 1px solid #eef2f7;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  .nav a:last-child {
+    border-bottom: none;
+  }
+
+  .nav a:hover {
+    color: var(--primary-light);
+  }
+
+  .nav a::after {
+    display: none;
+  }
+
+}
+
+
+/* =====================================================
+   MAPA - TABLETS
+===================================================== */
+
+@media (max-width: 850px) {
+
+  .location-map {
+    padding: 20px;
+  }
+
+  .map-container {
+    height: 330px;
+  }
+
+}
+
+
+/* =====================================================
+   MAPA - CELULARES
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .location-map {
+    margin-top: 25px;
+    padding: 16px;
+
+    border-radius: 15px;
+  }
+
+  .map-header {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .map-icon {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 12px;
+  }
+
+  .map-header h3 {
+    font-size: 1.05rem;
+  }
+
+  .map-header p {
+    font-size: 0.84rem;
+    line-height: 1.6;
+  }
+
+  .map-container {
+    height: 280px;
+
+    border-radius: 12px;
+  }
+
+  .map-button {
+    width: 100%;
+  }
+
+}
+
+
+/* =====================================================
+   CELULARES MUY PEQUEÑOS
+===================================================== */
+
+@media (max-width: 380px) {
+
+  .map-container {
+    height: 250px;
+  }
+
+  .map-header {
+    flex-direction: column;
+  }
+
+}
