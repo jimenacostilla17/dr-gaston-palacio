@@ -1384,36 +1384,30 @@ div[id="turnos-centro-medico"] {
 
 
 /* =====================================================
-   16. CONTACTO
+   CONTACTO - ESTILOS DEFINITIVOS
 ===================================================== */
 
+/* --- GRID PRINCIPAL --- */
 .contact-grid {
   width: 100%;
   max-width: 1200px;
-
   margin: 0 auto;
 
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
   align-items: start;
-
   gap: 35px;
 }
 
-
-/* INFORMACIÓN */
-
+/* --- COLUMNA DE CONTACTO DIRECTO --- */
 .contact-info {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: stretch;
-
   gap: 20px;
 }
 
-
-/* TARJETAS */
-
+/* --- TARJETAS DE CONTACTO --- */
 .contact-card {
   height: 100%;
   padding: 24px;
@@ -1451,7 +1445,6 @@ div[id="turnos-centro-medico"] {
 
 .contact-card h3 {
   margin-bottom: 10px;
-
   color: var(--primary);
   font-size: 1.05rem;
 }
@@ -1462,15 +1455,20 @@ div[id="turnos-centro-medico"] {
   line-height: 1.8;
 }
 
-.contact-card a:not(.btn) {
-  color: var(--primary-light);
-  font-weight: 600;
-  overflow-wrap: anywhere;
+/* --- TARJETA DE LLAMADA (OCUPA TODO EL ANCHO) --- */
+.contact-main-card {
+  grid-column: 1 / -1;
+
+  display: flex;
+  flex-direction: column;
 }
 
+.contact-main-card .btn {
+  width: 100%;
+  margin-top: 18px;
+}
 
-/* WHATSAPP */
-
+/* --- TARJETA DE WHATSAPP --- */
 .whatsapp-card {
   border: 2px solid rgba(37, 211, 102, 0.25);
 }
@@ -1481,9 +1479,6 @@ div[id="turnos-centro-medico"] {
 }
 
 .btn-whatsapp {
-  width: 100%;
-  margin-top: 18px;
-
   color: var(--white);
   background: var(--success);
 }
@@ -1493,74 +1488,136 @@ div[id="turnos-centro-medico"] {
   background: #1ebe5d;
 }
 
+/* --- TARJETA DE UBICACIÓN CLICKEABLE --- */
+.location-card-link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 
-/* =====================================================
-   17. TURNOS
-===================================================== */
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
 
-.contact-appointment {
-  position: sticky;
-  top: calc(var(--header-height) + 25px);
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  text-decoration: none;
+  color: inherit;
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition);
 }
 
-.appointment-box {
-  padding: 40px 30px;
-
-  text-align: center;
-
-  color: var(--white);
-  background: linear-gradient(
-    145deg,
-    var(--primary),
-    var(--primary-light)
-  );
-
-  border-radius: 22px;
-  box-shadow: var(--shadow);
+.location-card-link:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: #c9def5;
 }
 
-.appointment-icon {
-  width: 65px;
-  height: 65px;
+.location-card-link .location-icon {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  margin: 0 auto 20px;
+  color: var(--primary-light);
+  background: var(--primary-soft);
+  border-radius: 14px;
+
+  font-size: 1.2rem;
+}
+
+.location-card-link .location-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.location-card-link .location-label {
+  display: block;
+  margin-bottom: 3px;
+
+  color: var(--primary-light);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.location-card-link .location-content h3 {
+  margin-bottom: 3px;
+
+  color: var(--primary);
+  font-size: 1.05rem;
+}
+
+.location-card-link .location-content p {
+  margin: 0;
+
+  color: var(--text-light);
+  font-size: 0.85rem;
+}
+
+.location-card-link .location-map-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  flex-shrink: 0;
+  padding: 10px 14px;
 
   color: var(--white);
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 50%;
+  background: var(--primary);
+  border-radius: 10px;
 
-  font-size: 1.6rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+
+  transition: background var(--transition);
 }
 
-.appointment-box h3 {
-  margin-bottom: 12px;
-
-  font-size: 1.5rem;
-  line-height: 1.35;
-  text-wrap: balance;
+.location-card-link:hover .location-map-button {
+  background: var(--primary-light);
 }
 
-.appointment-box p {
-  margin-bottom: 25px;
+/* =====================================================
+   RESPONSIVE - CONTACTO
+===================================================== */
 
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 0.95rem;
-  line-height: 1.8;
-  text-align: center;
+@media (max-width: 850px) {
+  .contact-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contact-appointment {
+    position: static;
+  }
 }
 
-.appointment-box .btn {
-  color: var(--primary);
-  background: var(--white);
-}
+@media (max-width: 600px) {
+  .contact-info {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
 
-.appointment-box .btn:hover {
-  color: var(--primary);
-  background: #f0f5fa;
+  .contact-card {
+    padding: 22px;
+  }
+
+  .location-card-link {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .location-card-link .location-map-button {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 
@@ -3911,115 +3968,347 @@ div[id="turnos-centro-medico"] {
   }
 
 }
-<<<<<<< HEAD
-=======
+/* =====================================================
+   TARJETA DE TURNOS
+===================================================== */
+
+.appointment-card {
+  display: flex;
+  flex-direction: column;
+
+  padding: 28px 24px;
+
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.appointment-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.appointment-card .appointment-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 15px;
+
+  color: var(--primary-light);
+  background: var(--primary-soft);
+  border-radius: 12px;
+
+  font-size: 1.2rem;
+}
+
+.appointment-card h3 {
+  margin-bottom: 10px;
+  color: var(--primary);
+  font-size: 1.15rem;
+}
+
+.appointment-card p {
+  margin-bottom: 18px;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.appointment-card .btn {
+  width: 100%;
+  margin-top: auto;
+}
+/* =====================================================
+   CONTACTO - TARJETA COMBINADA
+===================================================== */
+
+.contact-combined-card {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-combined-card p {
+  margin-bottom: 20px;
+}
+
+.contact-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.contact-action {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 14px 16px;
+
+  border-radius: 12px;
+  text-decoration: none;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.contact-action:hover {
+  transform: translateY(-3px);
+}
+
+.contact-action-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+
+.contact-action span:last-child {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.contact-action strong {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.contact-action small {
+  font-size: 0.78rem;
+  opacity: 0.8;
+}
+
+/* --- BOTÓN LLAMADA --- */
+.call-action {
+  color: var(--primary);
+  background: var(--primary-soft);
+  border: 1px solid #d9eaff;
+}
+
+.call-action .contact-action-icon {
+  color: var(--white);
+  background: var(--primary);
+}
+
+.call-action:hover {
+  background: #e3f0ff;
+  box-shadow: 0 10px 25px rgba(0, 58, 135, 0.15);
+}
+
+/* --- BOTÓN WHATSAPP --- */
+.whatsapp-action {
+  color: #0f7b3e;
+  background: #e6f9ee;
+  border: 1px solid #b8f0ce;
+}
+
+.whatsapp-action .contact-action-icon {
+  color: var(--white);
+  background: var(--success);
+}
+
+.whatsapp-action:hover {
+  background: #d7f5e3;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.2);
+}
 
 /* =====================================================
-  ANIMACIÓN TEXTO "SOBRE MÍ"
+   TARJETA DE TURNOS CON MÁS COLOR
 ===================================================== */
-.about-text.parrafos-cascada {
+
+.appointment-card {
   position: relative;
-  padding: 35px 35px 35px 40px;
-  background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
-  border-left: 5px solid var(--primary);
-  border-radius: 0 18px 18px 0;
-  box-shadow: 0 10px 30px rgba(0, 58, 135, 0.08);
-  margin: 20px 0;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 32px 26px;
+
+  background: linear-gradient(
+    145deg,
+    var(--primary) 0%,
+    var(--primary-light) 100%
+  );
+
+  border-radius: var(--radius);
+  box-shadow: 0 20px 45px rgba(0, 58, 135, 0.25);
+
+  color: var(--white);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
-.about-text.parrafos-cascada::before {
-  content: "“";
+.appointment-card::before {
+  content: "";
   position: absolute;
-  top: -20px;
-  left: 20px;
-  font-size: 140px;
-  color: var(--primary);
-  opacity: 0.08;
-  font-family: Georgia, serif;
-  line-height: 1;
-  z-index: 0;
-  pointer-events: none;
+
+  top: -120px;
+  right: -100px;
+
+  width: 260px;
+  height: 260px;
+
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+
+  transition: transform 0.6s ease;
 }
 
-.about-text.parrafos-cascada p {
+.appointment-card::after {
+  content: "";
+  position: absolute;
+
+  bottom: -140px;
+  left: -90px;
+
+  width: 220px;
+  height: 220px;
+
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 50%;
+
+  transition: transform 0.6s ease;
+}
+
+.appointment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 28px 55px rgba(0, 58, 135, 0.32);
+}
+
+.appointment-card:hover::before {
+  transform: scale(1.2);
+}
+
+.appointment-card:hover::after {
+  transform: scale(1.15);
+}
+
+.appointment-card .appointment-icon {
   position: relative;
   z-index: 1;
-  font-size: 1.05rem;
-  line-height: 1.9;
-  color: var(--text);
+
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+
+  font-size: 1.4rem;
+
+  backdrop-filter: blur(6px);
+}
+
+.appointment-card h3 {
+  position: relative;
+  z-index: 1;
+
+  margin-bottom: 12px;
+
+  color: var(--white);
+  font-size: 1.35rem;
+  line-height: 1.35;
+}
+
+.appointment-card p {
+  position: relative;
+  z-index: 1;
+
   margin-bottom: 22px;
+
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.94rem;
+  line-height: 1.8;
 }
 
-/* Cada palabra empieza invisible para la animación */
-.about-text.parrafos-cascada .palabra {
-  opacity: 0;
-  display: inline-block;
-  transform: translateY(10px);
-}
+/* --- BOTÓN DEL TURNO --- */
+.btn-appointment {
+  position: relative;
+  z-index: 1;
 
-/* Cuando el contenedor es visible, se animan */
-.about-text.parrafos-cascada.visible .palabra {
-  animation: palabraAparece 0.3s ease forwards;
-}
+  width: 100%;
 
-/* Animación de cada palabra */
-@keyframes palabraAparece {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Colores para palabras clave */
-.about-text.parrafos-cascada .palabra.azul-fuerte {
   color: var(--primary);
-  font-weight: 800;
-  font-size: 1.0em;
+  background: var(--white);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-.about-text.parrafos-cascada .palabra.azul-claro {
-  color: var(--primary-light);
-  font-weight: 700;
-}
-
-.about-text.parrafos-cascada .palabra.acento {
-  color: #2969e0; 
-  font-weight: 700;
-}
-
-@media (max-width: 600px) {
-  .about-text.parrafos-cascada { padding: 25px 20px; }
-  .about-text.parrafos-cascada::before { font-size: 100px; top: -10px; left: 10px; }
-  .about-text.parrafos-cascada p { font-size: 1rem; }
+.btn-appointment:hover {
+  color: var(--primary);
+  background: #f0f6ff;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* =====================================================
-   RESTAURACIÓN: CARRUSEL DE TESTIMONIOS
+   RESPONSIVE - CONTACTO
 ===================================================== */
-.carrusel-testimonios {
-  position: relative;
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto 45px;
-  overflow: hidden;
-}
-
-.carrusel-track {
-  display: flex;
-  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  width: 100%;
-}
-
-.carrusel-testimonios .testimonial-card {
-  width: 100%;
-  flex-shrink: 0;
-  padding: 35px;
-  box-sizing: border-box;
-}
 
 @media (max-width: 600px) {
-  .carrusel-testimonios .testimonial-card {
-    padding: 25px 20px;
+  .contact-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .appointment-card {
+    padding: 26px 20px;
+  }
+
+  .appointment-card h3 {
+    font-size: 1.2rem;
   }
 }
->>>>>>> 3c41337c4bd799df0c379d7efb0ecc2c0e486c65
+/* =====================================================
+   CONTACTO - ORDEN DE TARJETAS
+===================================================== */
+
+/* Columna izquierda: 2 columnas internas */
+.contact-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  gap: 20px;
+}
+
+/* Contacto Directo ocupa las 2 columnas */
+.contact-combined-card {
+  grid-column: 1 / -1;
+}
+
+/* Horarios ocupa las 2 columnas (debajo) */
+.contact-info > .contact-card:last-child {
+  grid-column: 1 / -1;
+}
+
+/* Columna derecha: turno + ubicación */
+.contact-appointment {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}

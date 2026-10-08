@@ -1241,273 +1241,155 @@
 
 
 
-    <!-- =====================================================
-    CONTACTO
-    ===================================================== -->
+ <!-- =====================================================
+     CONTACTO
+===================================================== -->
+<section class="section" id="contacto">
 
-    <section
-      class="section"
-      id="contacto"
-    >
+  <div class="section-heading">
+    <h2>Contacto</h2>
+    <p>
+      Comunicate directamente para realizar consultas
+      o solicitar información.
+    </p>
+    <span class="line"></span>
+  </div>
 
-      <div class="section-heading">
+  <div class="contact-grid">
 
-        <h2>
-          Contacto
-        </h2>
+    <!-- =================================================
+         COLUMNA IZQUIERDA: CONTACTO + HORARIOS
+         ================================================= -->
+    <div class="contact-column">
+
+      <!-- TARJETA COMBINADA: LLAMADA + WHATSAPP -->
+      <article class="contact-card contact-combined-card">
+
+        <div class="icon">
+          <i class="fa-solid fa-address-book" aria-hidden="true"></i>
+        </div>
+
+        <h3>Contacto Directo</h3>
 
         <p>
-          Comunicate directamente para realizar consultas
-          o solicitar información.
+          Comunicate por llamada o WhatsApp para realizar
+          consultas o solicitar información.
         </p>
 
-        <span class="line"></span>
-
-      </div>
-
-
-      <div class="contact-grid">
-
-
-        <!-- INFORMACIÓN -->
-        <div class="contact-info">
-
-
-          <!-- DIRECCIÓN -->
-          <article class="contact-card">
-
-            <div class="icon">
-
-              <i
-                class="fa-solid fa-location-dot"
-                aria-hidden="true"
-              ></i>
-
-            </div>
-
-
-            <h3>
-              Dirección
-            </h3>
-
-
-            <p>
-              24 de Septiembre 2070<br>
-              Concepción, Tucumán<br>
-              C.P. 4146
-            </p>
-
-          </article>
-
-
-
-          <!-- TELÉFONO -->
-          <article class="contact-card">
-
-            <div class="icon">
-
-              <i
-                class="fa-solid fa-phone"
-                aria-hidden="true"
-              ></i>
-
-            </div>
-
-
-            <h3>
-              Teléfono
-            </h3>
-
-
-            <p>
-
-              <strong>
-                Tel. fijo:
-              </strong>
-
-              <a href="tel:+543865425356">
-                3865 425356
-              </a>
-
-            </p>
-
-          </article>
-
-
-
-          <!-- WHATSAPP -->
-          <article class="contact-card whatsapp-card">
-
-            <div class="icon">
-
-              <i
-                class="fa-brands fa-whatsapp"
-                aria-hidden="true"
-              ></i>
-
-            </div>
-
-
-            <h3>
-              WhatsApp
-            </h3>
-
-
-            <p>
-              Comunicate directamente por WhatsApp
-              para realizar consultas o solicitar información.
-            </p>
-
-
-            <a
-              class="btn btn-whatsapp"
-              href="https://wa.me/543865762230"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-
-              <i class="fa-brands fa-whatsapp"></i>
-
-              Escribir por WhatsApp
-
-            </a>
-
-          </article>
-
-
-
-          <!-- HORARIOS -->
-          <article class="contact-card">
-
-            <div class="icon">
-
-              <i
-                class="fa-solid fa-clock"
-                aria-hidden="true"
-              ></i>
-
-            </div>
-
-
-            <h3>
-              Horarios de Atención
-            </h3>
-
-
-            <p>
-
-              Lunes, martes, jueves y viernes<br>
-
-              <strong>
-                16:00 a 21:00 hs.
-              </strong>
-
-            </p>
-
-          </article>
-
-        </div>
-
-
-        <!-- =================================================
-        SOLICITAR TURNO
-        ================================================= -->
-
-        <div
-          class="contact-appointment"
-          id="turnos-centro-medico"
-        >
-
-          <div class="appointment-box">
-
-            <span class="appointment-icon">
-
-              <i
-                class="fa-solid fa-calendar-check"
-                aria-hidden="true"
-              ></i>
-
+        <div class="contact-buttons">
+
+          <a
+            class="contact-action call-action"
+            href="tel:+543865425356"
+          >
+            <span class="contact-action-icon">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
             </span>
 
+            <span>
+              <strong>Llamar</strong>
+              <small>3865 425356</small>
+            </span>
+          </a>
 
-            <h3>
-              ¿Necesitás un turno?
-            </h3>
+          <a
+            class="contact-action whatsapp-action"
+            href="https://wa.me/543865762230"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="contact-action-icon">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            </span>
 
-
-            <p>
-              Para solicitar un turno, ingresá directamente
-              a la sección de turnos del Centro Médico.
-            </p>
-
-
-            <!--
-              CAMBIAR ESTE ENLACE POR LA URL REAL
-              DE LA SECCIÓN DE TURNOS DEL CENTRO MÉDICO.
-            -->
-
-            <a
-              class="btn btn-primary btn-large"
-              href="#turnos-centro-medico"
-            >
-              Solicitar turno
-            </a>
-
-          </div>
-          <!-- =================================================
-MAPA DE UBICACIÓN
-================================================= -->
-
-<div class="location-map">
-
-  <div class="map-header">
-
-    <div class="map-icon">
-      <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-    </div>
-
-    <div>
-      <span>UBICACIÓN</span>
-      <h3>Encontranos en Concepción</h3>
-      <p>
-        24 de Septiembre 2070, Concepción, Tucumán
-      </p>
-    </div>
-
-  </div>
-
-  <div class="map-container">
-
-    <iframe
-      src="https://www.google.com/maps?q=24+de+Septiembre+2070,+Concepcion,+Tucuman,+Argentina&output=embed"
-      title="Ubicación del consultorio del Dr. Gastón Antonio Palacio"
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-      allowfullscreen>
-    </iframe>
-
-  </div>
-
-  <a
-    class="btn btn-outline map-button"
-    href="https://www.google.com/maps/search/?api=1&query=24+de+Septiembre+2070,+Concepcion,+Tucuman,+Argentina"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <i class="fa-solid fa-route"></i>
-    Cómo llegar
-  </a>
-
-</div>
+            <span>
+              <strong>WhatsApp</strong>
+              <small>Enviar mensaje</small>
+            </span>
+          </a>
 
         </div>
 
+      </article>
+
+
+      <!-- TARJETA DE HORARIOS -->
+      <article class="contact-card">
+
+        <div class="icon">
+          <i class="fa-solid fa-clock" aria-hidden="true"></i>
+        </div>
+
+        <h3>Horarios de Atención</h3>
+
+        <p>
+          Lunes, martes, jueves y viernes<br>
+          <strong>16:00 a 21:00 hs.</strong>
+        </p>
+
+      </article>
+
+    </div>
+
+
+    <!-- =================================================
+         COLUMNA DERECHA: TURNO + UBICACIÓN
+         ================================================= -->
+    <div class="contact-column" id="turnos-centro-medico">
+
+      <!-- TARJETA DE TURNO (CON COLOR) -->
+      <div class="appointment-card">
+
+        <div class="appointment-icon">
+          <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+        </div>
+
+        <h3>¿Necesitás un turno?</h3>
+
+        <p>
+          Para solicitar un turno, ingresá directamente
+          a la sección de turnos del Centro Médico.
+        </p>
+
+        <a class="btn btn-appointment" href="#turnos-centro-medico">
+          Solicitar turno
+        </a>
+
       </div>
 
-    </section>
 
-  </main>
+      <!-- TARJETA DE UBICACIÓN -->
+      <a
+        class="location-card location-card-link"
+        href="https://www.google.com/maps/search/?api=1&query=24+de+Septiembre+2070,+Concepcion,+Tucuman,+Argentina"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Ver ubicación en Google Maps"
+        title="Ver ubicación en Google Maps"
+      >
 
+        <div class="location-icon">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+        </div>
+
+        <div class="location-content">
+          <span class="location-label">UBICACIÓN</span>
+          <h3>Ver ubicación en Google Maps</h3>
+          <p>Tocá para abrir el mapa</p>
+        </div>
+
+        <span class="location-map-button">
+          <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
+          <span>Ver mapa</span>
+        </span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
 
 
   <!-- =====================================================
