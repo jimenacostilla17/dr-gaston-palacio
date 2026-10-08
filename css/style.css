@@ -3911,3 +3911,115 @@ div[id="turnos-centro-medico"] {
   }
 
 }
+<<<<<<< HEAD
+=======
+
+/* =====================================================
+  ANIMACIÓN TEXTO "SOBRE MÍ"
+===================================================== */
+.about-text.parrafos-cascada {
+  position: relative;
+  padding: 35px 35px 35px 40px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+  border-left: 5px solid var(--primary);
+  border-radius: 0 18px 18px 0;
+  box-shadow: 0 10px 30px rgba(0, 58, 135, 0.08);
+  margin: 20px 0;
+}
+
+.about-text.parrafos-cascada::before {
+  content: "“";
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  font-size: 140px;
+  color: var(--primary);
+  opacity: 0.08;
+  font-family: Georgia, serif;
+  line-height: 1;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.about-text.parrafos-cascada p {
+  position: relative;
+  z-index: 1;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--text);
+  margin-bottom: 22px;
+}
+
+/* Cada palabra empieza invisible para la animación */
+.about-text.parrafos-cascada .palabra {
+  opacity: 0;
+  display: inline-block;
+  transform: translateY(10px);
+}
+
+/* Cuando el contenedor es visible, se animan */
+.about-text.parrafos-cascada.visible .palabra {
+  animation: palabraAparece 0.3s ease forwards;
+}
+
+/* Animación de cada palabra */
+@keyframes palabraAparece {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Colores para palabras clave */
+.about-text.parrafos-cascada .palabra.azul-fuerte {
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 1.0em;
+}
+
+.about-text.parrafos-cascada .palabra.azul-claro {
+  color: var(--primary-light);
+  font-weight: 700;
+}
+
+.about-text.parrafos-cascada .palabra.acento {
+  color: #2969e0; 
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .about-text.parrafos-cascada { padding: 25px 20px; }
+  .about-text.parrafos-cascada::before { font-size: 100px; top: -10px; left: 10px; }
+  .about-text.parrafos-cascada p { font-size: 1rem; }
+}
+
+/* =====================================================
+   RESTAURACIÓN: CARRUSEL DE TESTIMONIOS
+===================================================== */
+.carrusel-testimonios {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto 45px;
+  overflow: hidden;
+}
+
+.carrusel-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  width: 100%;
+}
+
+.carrusel-testimonios .testimonial-card {
+  width: 100%;
+  flex-shrink: 0;
+  padding: 35px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .carrusel-testimonios .testimonial-card {
+    padding: 25px 20px;
+  }
+}
+>>>>>>> 3c41337c4bd799df0c379d7efb0ecc2c0e486c65
